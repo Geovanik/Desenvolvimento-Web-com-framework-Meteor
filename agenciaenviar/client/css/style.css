@@ -1,0 +1,47 @@
+/* Procurar cores no site do rgb*/
+#id_divulgacao{
+	text-align: center;
+}	
+
+#id_footer{
+	text-align: center;
+	background-color:white;
+}
+
+#id_form_teste{
+	background-color: #54504d;
+	text-align: center;
+}
+
+#id_form_cadastro{
+	background-color: #54504d;
+	text-align: center;
+}
+
+#idFundoIndex{
+	background-color: #54504d;
+}
+#id_a_agencia{
+	color: white;
+	font-size: 16px;
+}
+
+#idProdutos{
+	background-color: white;
+}
+
+.fonte{
+	color: white;
+}
+
+legend{
+	color: white;
+}
+
+label{
+	color: white;
+}
+
+.medio{
+	width: 50%;
+}
