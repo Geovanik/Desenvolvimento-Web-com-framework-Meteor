@@ -1,0 +1,227 @@
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--no IE renderize com a versão mais nova que o cliente tiver. Precisa estar primeira l-->
+    <script src="http://arquivos.weblibras.com.br/auto/wl-min.js"></script><!--script para acessibilidade libras-->
+    <script>
+       var wl = new WebLibras({
+          position: WebLibrasIconPosition.Bottom
+       });
+    </script>
+    
+    <meta charset="utf-8"><!--acentos-->
+    <meta name="viewport" content="width = device-widht, initial-scale = 1" ><!--já coloca o site em visualização de acordo a tela do dispositivo-->
+
+    <title>Agencia Enviar - A empresa</title>
+
+    <!-- Última versão CSS compilada e minificada -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery-2.1.4.min.js"></script>-->
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+
+    <!-- Navbar (sit on top) MENU -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card-2">
+            <a href="index.php" class="w3-bar-item w3-button"> AGÊNCIA <strong>ENVIAR</strong></a>
+
+            <div class="w3-right w3-hide-small">
+                <a href="index.php" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Quem somos</a>
+                <a href="#solucoes" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Nossas soluções</a>
+                <a href="blog.php" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> O Blog da Enviar</a>
+                <a href="contato.php" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Contato</a>
+                <a href="areaCliente.php" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Acessar minha conta</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    <div id="idFundoIndex"><!--formatacao da div geral da index- plano de fundo....-->
+
+        <header class="w3-display-container w3-content w3-wide" id="home">
+            <div class="container-fluid">
+                <img class="w3-image hidden-print img-responsive" src="imagens/predio.jpg" alt="prédios altos, visão dos pé do prédios para o céu. Ao centro logo da Enviar"><!-- imagem responsiva e com acessibilidade-->
+                <!-- imagem não aparece na impressão-->
+            </div>  
+            <div class="w3-display-middle w3-margin-top w3-center">
+                <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><strong>AGÊNCIA</strong></span><span class="w3-padding w3-blue w3-opacity-min" ><strong>ENVIAR</strong></span></h1>
+            </div>
+        </header>
+
+        <br>  
+
+        <div class="container">
+            <br>
+            <section><!-- dar enfase a algumas palavras mais importantes e formatar texto-->
+                <main><!-- para acessibilidade-->
+                    <p class="text-justify" id="id_a_agencia">
+                        A Agência Enviar é uma agência preocuapa em estreitar as relações de empresas com 
+                        clientes. Através de uma parceria realizada com você empreendedor(a), a Agência Enviar
+                        leva o conteúdo que você deseja até seus clientes, seja este conteúdo de campanhas publicitárias, 
+                        avisos, lembretes, ou qualquer outro tipo de informação.
+
+                        As soluções desenvolvidas pela Enviar englobam serviços personalizados e automatizados
+                        de envio de mensagem via programa de computador, sendo essas mensagens do tipo texto(sms).
+
+                        Agende uma consulta grátis e vamos até você, podemos lhe mostrar as vantagens de estreitar as relações
+                        com seus clientes. Seja um parceiro(a) da Agência Enviar.
+                        <br>
+                        <br>
+
+                        <button class="btn btn-large btn-block btn-info" type="button">Agendar consulta grátis</button>
+                        <br>
+                        <br>
+                    </p>
+                </main>
+            </section>
+        </div>
+    </div>   
+    <br>
+    
+    <div id="solucoes">        
+        {{> nossaFerramenta}}<!-- informações sobre a ferramenta de envio de sms-->
+        {{> mostrandoProdutos}}<!-- mostrando produtos-->   
+        {{> spam}}
+        {{> testeEnvio}}
+    
+    </div>
+    
+    {{> footer}}<!-- chamando footer-->
+
+
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
+</template>
+
+<template name="nossaFerramenta"><!--conteúdo sobre a ferramenta de envio de sms-->
+     <section class="container">
+        <h3>Nossa ferramenta:</h3>
+        <p class="text-justify">
+            A Agência Enviar desenvolveu e está em constante aperfeiçoamento de uma ferramenta computacional
+            que envia de forma automática mensagens de texto aos clientes nela cadastrados. Se você empreendedor(a)
+            gostaria de estreitar as relações com seus clientes, ela é a ferramenta ideal.
+
+            Em primeiro momento pode parecer que a ferramenta é algo simples, e talvez seja! Mas ela possui um grande
+            valor, principalmente em situações onde se deseja levar uma informação especifíca à um cliente, lembrá-lo
+            de que precisa retornar a sua empresa para realizar parte de um trabalho que esta sendo realizado contínuamente, 
+            ou parabenizá-lo pelo aniversário, ou ainda mostrar a ele os produtos que sua loja oferece com preço diferenciado.
+        </p>
+    </section>
+</template>
+
+<template name="mostrandoProdutos"><!--conteúdo sobre a ferramenta de envio de sms-->
+     <div class="container-fluid" id="idProdutos">
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 thumbnail">
+                    <h3 class="text-center">Lembrete:</h3>
+                    <p>Lembre seus clientes e amigos de possíveis retornos a seu estabelecimento.</p>
+                    <p><a class="btn btn-info" role="button">Saiba mais sobre os lembretes via sms.</a></p>
+                    <img class="img-responsive" src="imagens/lembreteConsulta.jpg" alt="lembrete via sms">
+                </div>
+                <div class="col-md-4 thumbnail">
+                    <h3 class="text-center">Mensagem de Felicitações:</h3>
+                    <p>Todo cliente gosta de ser lembrado, então porque não parabenizá-lo em uma data tão importante
+                    como o seu aniversário?</p>
+                    <p><a class="btn btn-info" role="button">Saiba mais sobre as mensagens de felicitações.</a></p>
+                    <img class="img-responsive" src="imagens/felicitacoes.png" alt="mensagem de felicitações">
+                </div>
+                <div class="col-md-4 thumbnail">
+                    <h3 class="text-center">Campanha publicitária:</h3>
+                    <p>Divulgue seus produtos de uma maneira rápida e direta através do sms de marketing.</p>
+                    <p><a class="btn btn-info" role="button">Saiba mais sobre as mensagens publicitárias.</a></p>
+                    <img class="img-responsive" src="imagens/smsMarketing.png" alt="lembrete via sms">
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</template>
+
+<template name="spam">
+    
+    <section>
+        <div class="container">
+            <h3>A Política Anti-Spam da Enviar:</h3>
+            <p class="text-justify">
+            O serviço de envio de mensagens de texto muitas vezes é realizado de forma abusiva, de forma a perturbar
+            e incomodar as pessoas que o recebem, visto que a entrega das mensagens pode ser realizado em horas inoportunas 
+            da noite e na madrugada, de maneira exagerada e até mesmo de forma exploratória ou ameaçativa, sem qualquer
+            autorização prévia de quem a recebe.
+
+            A Agência Enviar NÃO realiza seu trabalho sob qualquer um dos itens citados acima, 
+            repúdiando ao uso indevido desse meio de comunicação, sendo que esta se coloca no direito de deixar de 
+            prestar o serviço a quem desejar ou tentar enviar mensagens nas condições acimas citadas.
+
+            Todas as pessoas que receberem alguma informação via ferramenta desenvolvida pela Enviar, serão
+            consultadas previamente sobre o recebimento do conteúdo, e receberão este em horário apropriado, de 
+            maneira não abusiva, sendo possível a qualquer momento desativar o serviço de entrega de mensagens ao
+            seu número.
+            </p>
+            
+            <br>
+            
+        </div>
+    </section>
+</template>
+        
+<template name="testeEnvio">
+    
+    <div class="container">
+        <h3>Teste de envio de sms</h3>
+        <div id="id_form_teste">
+            <form method="post" action=""> 
+                <fieldset>
+                    <legend><h3 class="fonte">Enviando Mensagem de texto:</h3></legend>
+                    <label for="id_dd">Informe o DDD: </label><br>
+                    <input id="id_dd" type="text" name="dd" placeholder="55" required ><!-- required campo obrigatório e autofocus coloca o cursor no label-->	
+                    <br><br>
+                    <label for="id_fone">Telefone: </label><br>
+                    <input id="id_fone" type="text" name="numero" placeholder="988688228" required>
+                    <br><br>
+                    <label for="id_mensa">Mensagem:</label><br>
+                    <textarea id="id_mensa" name="mensagem" rows="5" cols="30" maxlength="500" required></textarea>
+
+                    <input type="hidden" name="acao" value="enviartorpedo">
+                </fieldset>
+                <br>
+                <input type = "submit" class="btn btn-success btn-md" value="Enviar Mensagem">
+                <hr>
+
+            </form>
+        </div>
+    </div>
+</template>
+
+<template name="footer">
+    <div class="container-fluid footer" id="id_footer">
+        <footer>
+            <p >Desenvolvido por GeovaniK</p>
+            <h5><strong><p >Contato: geovanik6@gmail.com ou pelo fone:(49)988688228</p></strong></h5>
+            <p >Todos os direitos reservados a Agência Enviar</p>
+            <br>
+            <br>
+        </footer>
+    </div>   
+</template>
+
