@@ -1,3 +1,5 @@
+
+
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--no IE renderize com a versão mais nova que o cliente tiver. Precisa estar primeira l-->
     <script src="http://arquivos.weblibras.com.br/auto/wl-min.js"></script><!--script para acessibilidade libras-->
@@ -29,7 +31,8 @@
         <div class="container-fluid w3-white"><!-- primeiro menu superior do login-->
             
             <div class="login">
-                {{> loginButtons}}
+                Bem vindo {{usuario}} {{> loginButtons}} 
+                                
             </div>
             
         </div>
@@ -110,13 +113,14 @@
     </div>
     
     <div id="areaCliente">
-        {{> areaCliente}}
+        {{> janela_cadastro}}
     </div>
     
     {{> footer}}<!-- chamando footer-->
 
 
 </body>
+
 
 <template name="nossaFerramenta"><!--conteúdo sobre a ferramenta de envio de sms-->
     <br> 
@@ -304,7 +308,7 @@
 
 </template>
 
-<template name="areaCliente">
+<template name="janela_cadastro">
     <div class="container-fuid">
         <br>
         <br>
@@ -323,21 +327,9 @@
                     </div>
                     <br><br>
 
-                    <label class="col-sm-6 control-label" for="id_cnpj">*CNPJ: </label>
-                    <div class="col-sm-2">
-                        <input id="id_cnpj" type="text" name="cnpj" placeholder=" xx.xxx.xxx/yyyy-zz" size="26" required><!-- required campo obrigatório e autofocus coloca o cursor no label-->
-                    </div>
-                    <br><br>
-
                     <label class="col-sm-6 control-label" for="id_email">*Email: </label>
                     <div class="col-sm-2">
                         <input id="id_email" type="Email" name="email" placeholder="empresa@mail.com.br" size="26" required>
-                    </div>
-                    <br><br>
-
-                    <label class="col-sm-6 control-label" for="id_telefone">*Telefone da empresa: </label>
-                    <div class="col-sm-2">
-                        <input id="id_telefone" type="text" name="telefone" placeholder="dddxxxx-xxxx" size="26" required>
                     </div>
                     <br><br>
 
@@ -348,59 +340,6 @@
                     <br>
                     <br>
                     <h6 class="fonte">*Não esqueça de adicionar o dígito 9 para números da região sul do país.</h6>
-
-                    <fieldset>
-                        <legend><h4 class="fonte"><hr>Endereço completo:</h4></legend>
-                        <label class="col-sm-6 control-label" for="id_estado">*Estado: </label>
-                        <div class="col-sm-2">
-                            <select name="estado" required>
-                                <option value="">Selecione</option>
-                                <option value="SC">SC</option>
-                                <option value="RS">RS</option>
-                                <option value="PR">PR</option>
-                            </select>
-                        </div>
-                        <br><br>
-
-                        <label class="col-sm-6 control-label" for="id_cidade">*Cidade: </label>
-                        <div class="col-sm-2">
-                            <input id="id_cidade" type="text" name="cidade" placeholder="Chapecó" size="26" required>
-                        </div>
-                        <br><br>
-
-                        <label class="col-sm-6 control-label" for="id_bairro">*Bairro: </label>
-                        <div class="col-sm-2">
-                            <input id="id_bairro" type="text" name="bairro" placeholder="centro" size="26" required>
-                        </div>
-                        <br><br>
-
-                        <label class="col-sm-6 control-label" for="id_rua">*Rua: </label>
-                        <div class="col-sm-2">
-                            <input id="id_rua" type="text" name="rua" placeholder="Antonio Vargas" size="26" required>
-                        </div>
-                        <br><br>
-
-                        <label class="col-sm-6 control-label" for="id_numero">*Número e letra: </label>
-                        <div class="col-sm-2">
-                            <input id="id_numero" type="text" name="numeroletra" pattern="[0-9]{4}[a-zA-Z]" placeholder="1234A" required><!-- expressao regular-->
-                        </div>
-                        <br><br>
-
-                        <label class="col-sm-6 control-label" for="id_edificio">*Nome do edifício: </label>
-                        <div class="col-sm-2">
-                            <input id="id_edificio" type="text" name="edificio" placeholder="ed Vargas" size="26" required>
-                        </div>
-                        <br><br>
-
-                        <label class="col-sm-6 control-label" for="id_referencia">Ponto de referência: </label>
-                        <div class="col-sm-2">
-                            <input id="id_referencia" type="text" name="referencia" size="45">
-                        </div>
-                        <br>
-                        <br>
-                        <h6 class="fonte">*Todos os campos maracdos com * devem ser preenchidos.<br>
-                            Entre em contato com o suporte em caso de dificuldade.</h6>
-                    </fieldset>
 
                 </fieldset>
 
